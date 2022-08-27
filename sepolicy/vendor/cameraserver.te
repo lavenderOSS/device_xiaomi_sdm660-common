@@ -3,3 +3,5 @@ get_prop(cameraserver, vendor_camera_prop)
 get_prop(cameraserver, vendor_video_prop)
 set_prop(cameraserver, system_prop)
 binder_call(cameraserver, mediacodec)
+
+allow cameraserver property_socket:sock_file { write };

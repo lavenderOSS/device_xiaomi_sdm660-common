@@ -9,6 +9,5 @@ cc_library_shared {
         "libui",
         "libutils",
     ],
-
-    proprietary: true,
+    vendor: true,
 }

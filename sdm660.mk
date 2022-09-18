@@ -189,6 +189,9 @@ PRODUCT_PACKAGES += \
     memtrack.sdm660 \
     libdisplayconfig \
     libtinyxml \
+    libtinyxml.vendor \
+    tinyxml2 \
+    libxml2  \
     vendor.display.config@1.0 \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
@@ -200,8 +203,10 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.4.vendor
+    android.hardware.drm@1.0-impl:64 \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -486,7 +491,8 @@ PRODUCT_COPY_FILES += \
 # QMI
 $(call inherit-product, external/json-c/Android.configure.mk)
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libjson.vendor
 
 # QTI Performance
 PRODUCT_COPY_FILES += \
@@ -554,12 +560,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-
-# Tin
-PRODUCT_PACKAGES += \
-    libtinyxml \
-    tinyxml2 \
-    libxml2 
 
 # Thermal
 PRODUCT_PACKAGES += \

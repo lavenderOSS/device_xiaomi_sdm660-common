@@ -213,6 +213,9 @@ TARGET_USE_AOSP_SURFACEFLINGER := true
 # USB
 TARGET_USES_USB_GADGET_HAL := true
 
+# Renderscript
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
